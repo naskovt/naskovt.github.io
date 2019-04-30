@@ -13,30 +13,22 @@ h1, h2, h3, h4, h5, h6 {
 </style>
 </head>
 
-<body style="width:100%;">
+<body>
 
 <!-- Menu -->
- <div class="w3-top m3 l3" >
-    <div class="w3-row w3-padding w3-white ">
+<div class="top-bar">
+    <div class="top-menu-container">
 
-      <div class="w3-col s4">
-      <a href="" class="w3-button w3-block w3-white">PROJECTS</a>
+        <a onclick="scrollToProjects()" class="button_">PROJECTS</a>
+        <a href="https://github.com/naskovt?tab=repositories" class="button_">GITHUB</a>
+        <a onclick="scrollToAbout()" class="button_">ABOUT ME</a>
+
     </div>
-
-      <div class="w3-col s4">
-        <a href="" class="w3-button w3-block w3-white">ABOUT ME</a>
-      </div>
-
-    <div class="w3-col s4">
-      <a href="https://github.com/naskovt?tab=repositories" class="w3-button w3-block w3-white">GITHUB</a>
-    </div>
-
-  </div>
 </div>
 
 
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide"  id="home">
+<header class="w3-display-container w3-content w3-wide">
   <!-- <img class="w3-image" src="./resources/artofcoding.jpg" alt="artofcoding Catering" width="1600" height="800"> -->
   <!-- <p class="w3-large">THE ART OF CODING.</p> -->
   
@@ -51,14 +43,14 @@ h1, h2, h3, h4, h5, h6 {
 </header>
 
 
-<h1 class="w3-center">Behind the scenes</h1><br>
+<h1 class="w3-center" id="my-projects">Behind the scenes</h1><br>
 
 
 <!-- Page content -->
 <div  style="width:100%; text-align: center" >
 
   <!-- Interior walkthrough Section -->
-  <div class="w3-row w3-padding-64" id="about">
+  <div class="w3-row w3-padding-64">
     <div class="w3-col l6 w3-padding-large">
           <img src="./resources/learntocode.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
     </div>
@@ -73,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   <hr>
 
   <!--Aircraft Marshaller-->
-  <div class="w3-row w3-padding-64" id="about">
+  <div class="w3-row w3-padding-64">
 
       <div class="w3-col l6 w3-padding-large">
           <img src="./resources/learntocode.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
@@ -89,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   <hr>
 
   <!-- AR watch-->
-  <div class="w3-row w3-padding-64" id="about">
+  <div class="w3-row w3-padding-64"  id="article">
     <div class="w3-col l6 w3-padding-large">
           <img src="./resources/learntocode.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
     </div>
@@ -102,9 +94,9 @@ h1, h2, h3, h4, h5, h6 {
   </div>
   <hr>
 
-      <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
-    <div class="w3-col l6 w3-padding-large">
+      <!-- SKILLLS Section -->
+  <div class="w3-row w3-padding-64 " id="article">
+    <div class="w3-col l6 w3-padding-large ">
         <h1 class="w3-center">My skills</h1><br>
         <h4>Unity game engine</h4>
         <p class="w3-text-grey">Several simulators for VR and AR done in one of the top game engines. Using custom solutions for solving specific problems. </p><br>
@@ -119,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
         <p class="w3-text-grey">Been envolved with some 3D modeling and texturing, also preparing small scripts in max and photoshop.</p>
     </div>
 
-    <div class="w3-col l6 w3-padding-large">
+    <div class="w3-col l6 w3-padding-large" >
         <h1 class="w3-center">Education</h1><br>
         <h4>C++ Advanced certificate</h4>
         <p class="w3-text-grey">Several simulators for VR and AR done in one of the top game engines. Using custom solutions for solving specific problems. </p><br>
@@ -147,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   <div class="w3-content" style="max-width:1100px">
 
       <!-- About Section -->
-      <div class="w3-row w3-padding-64" id="about">
+      <div class="w3-row w3-padding-64" id="about-me">
           <div class="w3-col l6 w3-padding-large">
               <img src="./resources/me.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
         </div>
@@ -179,12 +171,97 @@ h1, h2, h3, h4, h5, h6 {
 </div>
 
 <!-- Footer -->
-
+<!--
 <script type="text/javascript" async="" src="./resources/engine.js"></script></body></html>
-
+-->
 <script>
-    function scrollToElement() {
-      //var elmnt = document.getElementById("content");
-      //elmnt.scrollIntoView();
+
+function scrollIt(destination, duration, easing, callback) {
+
+const easings = {
+  linear(t) {
+    return t;
+  },
+  easeInQuad(t) {
+    return t * t;
+  },
+  easeOutQuad(t) {
+    return t * (2 - t);
+  },
+  easeInOutQuad(t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  },
+  easeInCubic(t) {
+    return t * t * t;
+  },
+  easeOutCubic(t) {
+    return (--t) * t * t + 1;
+  },
+  easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+  },
+  easeInQuart(t) {
+    return t * t * t * t;
+  },
+  easeOutQuart(t) {
+    return 1 - (--t) * t * t * t;
+  },
+  easeInOutQuart(t) {
+    return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
+  },
+  easeInQuint(t) {
+    return t * t * t * t * t;
+  },
+  easeOutQuint(t) {
+    return 1 + (--t) * t * t * t * t;
+  },
+  easeInOutQuint(t) {
+    return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
+  }
+};
+
+const start = window.pageYOffset;
+const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+
+const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
+const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+
+if ('requestAnimationFrame' in window === false) {
+  window.scroll(0, destinationOffsetToScroll);
+  if (callback) {
+    callback();
+  }
+  return;
+}
+
+function scroll() {
+  const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+  const time = Math.min(1, ((now - startTime) / duration));
+  const timeFunction = easings[easing](time);
+  window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
+
+  if (window.pageYOffset === destinationOffsetToScroll) {
+    if (callback) {
+      callback();
+    }
+    return;
+  }
+
+  requestAnimationFrame(scroll);
+}
+
+scroll();
+}
+
+    function scrollToAbout(){
+      var elmnt = document.getElementById("about-me");
+      scrollIt(elmnt, 1300, 'easeOutQuad');
+    }
+
+    function scrollToProjects(){
+      var elmnt = document.getElementById("my-projects");
+      scrollIt(elmnt, 1000, 'easeOutQuad');
     }
 </script>
