@@ -1,6 +1,6 @@
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
-article,figcaption,header,main,menu,nav,section{display:block}
+article,figcaption,header,main,menu,nav,section,#about-me{display:block}
 canvas,video{display:inline-block}[hidden]{display:none}
 
 
@@ -22,20 +22,50 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}
 html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
 h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.-wide{letter-spacing:4px}
-hr{border:0;border-top:1px solid #eee;margin:20px 0}
-.-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}:disabled *{pointer-events:none}
+hr{border:0;border-top:1px solid #cccccc;margin:20px 0}
+.-image{max-width:100%;min-width:300px;height:auto}img{vertical-align:middle}a{color:inherit}:disabled *{pointer-events:none}
 .-display-container{position:relative}
 #main{transition:margin-left .4s}
-/* .-row:after,.-row:before{content:"";display:table;clear:both} */
-/* .-row:after,.-row:before{content:"";display:table;clear:both} */
+
 .-col{float:left;width:100%}
-@media (min-width:993px){.-col.l6{width:49.99999%}}
+@media (min-width:993px){.-col.l6{width:49.99999%;height: 400px;}}
 .-content{margin-left:auto;margin-right:auto}.-content{max-width:980px}
-@media (max-width:992px) and (min-width:601px){.-hide-medium{display:none!important}}.-round{border-radius:4px}@keyframes -spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}.-opacity-min{opacity:0.75}.-medium{font-size:15px!important}.-large{font-size:18px!important}.-center{text-align:center!important}.-padding-large{padding:12px 24px!important}
+@media (max-width:992px) and (min-width:601px){.-hide-medium{display:none!important}}.-round{border-radius:15px}@keyframes -spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}.-opacity-min{opacity:0.75}.-medium{font-size:15px!important}.-large{font-size:18px!important}.-center{text-align:center!important}.-padding-large{padding:12px 24px 40px 24px!important}
 .-padding-64{padding-top:64px!important;padding-bottom:64px!important}
 .-text-grey{color:#757575!important}
 
 
+/* Flex Box contents */
+
+.flex-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: flex-start;
+ }
+
+ .flex-content  {
+   display: flex;
+   flex: 1 1 100px;
+   background-color: white;
+   margin: 10px;
+
+   min-width: 200px;
+ }
+
+ .flex-pics{
+ }
+
+ .flex-text{
+   flex-direction: column;
+ }
+
+.flex-image{
+   width:100%;
+   height:100%;
+}
+
+/*==================  */
 .top-bar{
    position: fixed;
    width: 100%;
@@ -76,38 +106,53 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
    padding-top:40px;
 }
 
+/* ABOUT ME -CONTACTS */
 #about-me{
-   display:inline;
-   white-space: nowrap;
-      /* clear:left; */
+   
+   display:flex;
+   justify-content: center;
+   flex-wrap: nowrap;
+   width: 100%;
+   padding:20px;
 }
 
-.my-pic{
-   min-width: 50px;
-   max-width: 300px;
-}
-.my-contacts{
-   min-width: 50px;
-   max-width: 300px;
+.my-contact-container, .my-pic-container{
+   display:flex;
+
 }
 
-.my-contacts h1,p{
-   text-align: left;
+.my-pic-container{
+   margin-right: 10%;
+
+}
+.my-contact-container{
+   flex-wrap: wrap;
+   flex-flow: column;
+
+   padding-left: 15px;
 }
 
-.no-wrap{
-   white-space: nowrap;
+.my-pic-img{
+   flex: 1 1 100px;
+   object-fit: contain;
+   align-self: center;
+   /* width: 100%;
+   height: auto; */
 }
 
-.my-skills{
-   text-align: left;
+.contact-details{
+   /* text-align: left; */
+   line-height:1.5;
 }
+/* ----------------------- */
 
-/* .button_:hover{box-shadow:0 8px 10px 0 rgba(0,0,0,0.2),0 0 5px 0 rgba(0,0,0,0.19)} */
+
+hr{
+   margin-bottom: 50px;
+}
 
 header{
    text-align:center;
-
 }
 
 .page-body{
