@@ -26,7 +26,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}:disabled *{pointer-events:none}
 .-display-container{position:relative}
 #main{transition:margin-left .4s}
-.-row:after,.-row:before{content:"";display:table;clear:both}
+/* .-row:after,.-row:before{content:"";display:table;clear:both} */
+/* .-row:after,.-row:before{content:"";display:table;clear:both} */
 .-col{float:left;width:100%}
 @media (min-width:993px){.-col.l6{width:49.99999%}}
 .-content{margin-left:auto;margin-right:auto}.-content{max-width:980px}
@@ -42,39 +43,34 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
    margin:  auto; /* Will not center vertically and won't work in IE6/7. */
    left: 0;
    right: 0;
-   z-index: 3;
+   z-index: 10;
    background-color: white ;
+
    text-align: center;
+
 }
 
 
 .button_{
-
-   width:20%;
-   height:20px;
-   padding: 0px 5%;
-
+   height:100%;
+   width: 20%;
+   
+   /* padding:  10% 7% 5% 7%; */
    text-align:center;
-   vertical-align:middle;
+   padding-top: 6px;
 
-
+   position: relative;
+   display: inline-block;
    border:none;
-   display:inline-block;
    overflow:hidden;
    text-decoration:none;
    color:inherit;
-   background-color:inherit;
    cursor:pointer;
    white-space:nowrap;
    
+   font-size: 85%;
 }
 
-a{
-   padding-left: 0;
-   font-size: 75%;
-   text-align:center;
-   vertical-align:middle;
-}
 
 #my-projects{
    padding-top:40px;
@@ -107,4 +103,67 @@ a{
    text-align: left;
 }
 
-.button_:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+/* .button_:hover{box-shadow:0 8px 10px 0 rgba(0,0,0,0.2),0 0 5px 0 rgba(0,0,0,0.19)} */
+
+header{
+   text-align:center;
+
+}
+
+.page-body{
+   width:70%; 
+   text-align:center;
+   margin: auto;
+}
+
+.video-div{
+   margin: 0 auto;
+   width: 100%;
+   height:auto;
+   text-align:center;
+
+}
+
+
+/* Shutter In Vertical */
+.hvr-shutter-in-vertical {
+   display: inline-block;
+   vertical-align: middle;
+   -webkit-transform: perspective(1px) translateZ(0);
+   transform: perspective(1px) translateZ(0);
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+   position: relative;
+   background: #555555;
+   -webkit-transition-property: color;
+   transition-property: color;
+   -webkit-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+ }
+ .hvr-shutter-in-vertical:before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: #ffffff;
+   -webkit-transform: scaleY(1);
+   transform: scaleY(1);
+   -webkit-transform-origin: 50%;
+   transform-origin: 50%;
+   -webkit-transition-property: transform;
+   transition-property: transform;
+   -webkit-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -webkit-transition-timing-function: ease-out;
+   transition-timing-function: ease-out;
+ }
+ .hvr-shutter-in-vertical:hover, .hvr-shutter-in-vertical:focus, .hvr-shutter-in-vertical:active {
+   color: white;
+ }
+ .hvr-shutter-in-vertical:hover:before, .hvr-shutter-in-vertical:focus:before, .hvr-shutter-in-vertical:active:before {
+   -webkit-transform: scaleY(0);
+   transform: scaleY(0);
+ }
+ 
