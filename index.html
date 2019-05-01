@@ -30,6 +30,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 <div class="video-div">
+
+    <p class="ontop-of-video-p">
+				Welcome to the creative coding!
+    </p>
+      
     <video class="-image" muted autoplay loop>
         <source src="./resources/mymovie.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -157,18 +162,27 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 
     <div class="my-contact-container">
-      <!-- <img class="my-pic-img" src="./resources/me.jpg"  alt="Picture of me."> -->
-      <h4 >Contact:</h4><br>
-      <p class="contact-details">Mobile: 0883440788<br>Email: naskovvt@abv.bg<br>3D Developer in Technofy</p>
+      <h4 > &emsp;&emsp;My motivation:</h4><br>
+      <p class="-text-grey">&emsp;&emsp;As a child, I've been interested in technology and creativity and always strived to invent new things.
+         Since the day I drew my first custom board game, till now I'm still excited about stuff that makes the people impassioned.
+          For the past 2 years, I've been developing immersive virtual worlds and exploring the infitive universe of the computer technologies combined with creativity.</p>
     </div>
 
   </div>
   <!-- ========================================================================================  -->
+
+  <h5>Mobile:0883440788 &emsp;naskovvt@abv.bg</h5>
+  <p class="-text-grey">3D Developer in Technofy</p>
+
+  <hr>
   
 </div>
 
 
-  <script>
+<script>
+
+  // smooth scroll JS only!
+
 
 function scrollIt(destination, duration, easing, callback) {
 
@@ -259,3 +273,33 @@ scroll();
       scrollIt(elmnt, 1000, 'easeOutQuad');
     }
 </script>
+
+<script>
+
+  // resize text ontop of video 
+
+  var videoDiv = document.getElementsByClassName("video-div")[0];
+  var ontopVideoP = document.getElementsByClassName("ontop-of-video-p")[0];
+  
+  videoDiv.style.width = "auto";
+  
+  var ratio = 0.565;
+  
+  
+  function AutoResizeDiv(){
+    
+    // videoDiv.style.height = videoDiv.getBoundingClientRect().width * ratio + "px";
+  
+    ontopVideoP.style.top = (videoDiv.getBoundingClientRect().height) / 2.7 + "px";
+  }
+  
+  
+  console.log("h: " + videoDiv.getBoundingClientRect().height);
+  
+  console.log("w: " + videoDiv.getBoundingClientRect().width);
+  
+  
+  // Execute the function each 100ms
+  setInterval(AutoResizeDiv, 100);
+      //console.log(ratio);
+  </script>
