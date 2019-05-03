@@ -3,13 +3,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./resources/styles/style.css">
-<style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
-}
-</style>
+
 </head>
 
 <body>
@@ -19,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 
   <a onclick="scrollToProjects()" class="button_ hvr-shutter-in-vertical">PROJECTS</a>
   <a href="https://github.com/naskovt?tab=repositories" class="button_ hvr-shutter-in-vertical">GITHUB</a>
-  <a onclick="scrollToAbout()" class="button_ hvr-shutter-in-vertical">CONTACT</a>
+  <a onclick="scrollToAbout()" class="button_ hvr-shutter-in-vertical">ABOUT ME</a>
 
 </div>
 
@@ -30,9 +24,15 @@ h1, h2, h3, h4, h5, h6 {
 
 <div class="video-div">
 
+  <div class="ontop-of-video">
+
     <p class="ontop-of-video-p">
-				Welcome to the creative coding!
+        Welcome to the creative coding!
     </p>
+    
+    <img onclick="scrollToProjects()" class="triangle bounce" src="./resources/pictures/arrow2.png" alt="arrow">
+
+  </div>
       
     <video class="-image" muted autoplay loop>
         <source src="./resources/mymovie.mp4" type="video/mp4">
@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 
   <!--Aircraft Marshaller-->
   <h1 class="-center">Aircraft Marshalling Simulator</h1><br>
-  <h5 class="-center">VR Simulator for learning the basics of the aircraft marshalling.</h5>
+  <h5 class="-center">VR Simulator for learning aircraft marshalling.</h5>
   <br><br>
   <div class="flex-container">
     
@@ -170,19 +170,38 @@ h1, h2, h3, h4, h5, h6 {
 
   <!-- AR watch-->
   <h1 class="-center">AR Watch</h1><br>
-
+  <h5 class="-center">Try on app for hand watches </h5>
+  <br><br>
   <div class="flex-container">
     
       <div class="flex-content flex-pics">
-          <img src="./resources/pictures/artofcoding.jpg" class="flex-image" alt="Content Picture" >
+          <img src="./resources/pictures/arwatch_1.png" class="flex-image" alt="Content Picture" >
       </div>
   
       <div class="flex-content flex-text">
-          <h5 class="-center">Try on application for hand watches with custom runtime reflections from the surrounding area.</h5>
-          <p class="-medium">The reflections on the watch are from the back and front cameras streams. For performance reasons, a custom combination of vertex and surface shaders is used, in order to get instantly the back camera feed as a spherical reflection on the watch. The front camera's photo is taken only once at startup of the app and is merged with the live sphercical reflection from the back camera, so that you can see your face in the watch, when it is pointed to you as looking into a mirror. Made with Unity.</p>
+          <p class="-medium">The concept is based on a high quality try on app with options for hyper customization for the hand watch.
+             The technical highlights on this prototype are the custom runtime reflections from the surrounding area, 
+            that run even on older phones, without fps drop. 
+            The reflections on the watch are from the back and front cameras streams. 
+            For performance reasons, a custom combination of vertex and surface shaders is used, 
+            in order to get instantly the back camera feed as a spherical reflection on the watch. </p>
       </div> 
   
   </div>
+  <div class="flex-container">
+    
+    
+    <div class="flex-content flex-text">
+      <p class="-medium">The front camera's photo is taken only once at startup of the app and is merged with the live back camera stream.
+        For combining both cameras images and creating a reflection map,
+         a special sphercical reflection mapping is used with an adjustable blured transition between them. 
+        This allows you to see your face in the watch, when it is pointed against you as looking into a mirror. Made with Unity and Vuforia.</p>
+    </div> 
+    
+    <div class="flex-content flex-pics">
+        <img src="./resources/pictures/arwatch_2.png" class="flex-image" alt="Content Picture" >
+    </div>
+</div>
 
   <hr>
   <!-- ========================================================================================  -->
@@ -231,32 +250,37 @@ h1, h2, h3, h4, h5, h6 {
     
       <div class="flex-content flex-text">
           <h1 class="-center">Skills</h1><br>
-          <h4>Unity game engine</h4>
-          <p class="-text-grey">Several simulators for VR and AR done in one of the top game engines. Using custom solutions for solving specific problems. </p><br>
-        
+          
           <h4>Programming languages</h4>
-          <p class="-text-grey">Skilled in OOP with C#, C++. Also have some experince with GLSL and javascript.</p><br>
+          <p class="-text-grey">Skilled in OOP with C# and C++. Have experince with GLSL and javascript. Knowledge in data structures and algorithms.</p><br>
+
+          <h4>Unity game engine</h4>
+          <p class="-text-grey">Several simulators for VR and AR done in one of the top game engines. Using custom solutions for solving specific problems, 
+            including photogrammetry technologies and involving in side projects for technological events.
+          </p><br>
         
           <h4>3D graphics coding</h4>
-          <p class="-text-grey">OpenGL basic shaders and specific custom solutions</p><br>
+          <p class="-text-grey">Familiar with OpenGL and DirectX basis for achieving specific graphics effects.</p><br>
         
-          <h4>3D technical artist </h4>
-          <p class="-text-grey">Been envolved with some 3D modeling and texturing, also preparing small scripts in max and photoshop.</p>
+          <h4>3D technical artist</h4>
+          <p class="-text-grey">Previuosly working as a 3D junior artist, using Maya, 3ds Max and photoshop.
+             Have some experience optimising workflows including writing maxscripts.</p>
       </div> 
   
       <div class="flex-content flex-text">
           <h1 class="-center">Education</h1><br>
           <h4>C++ Advanced certificate</h4>
-          <p class="-text-grey">Several simulators for VR and AR done in one of the top game engines. Using custom solutions for solving specific problems. </p><br>
+          <p class="-text-grey">Softuni certificate for completed OOP course in C++, covering memory management and main data structures. </p><br>
         
           <h4>Unity Advanced and Unity game dev courses</h4>
-          <p class="-text-grey">Skilled in OOP with C#, C++. Also have some experince with GLSL and javascript.</p><br>
+          <p class="-text-grey">Taken 1st place in both courses for creating the most exciting projects,
+             working with C# and covering many different game engine aspects.</p><br>
         
           <h4>Master degree in Software Engineering</h4>
-          <p class="-text-grey">UNIBIT 1,5 year program 2017-2018</p><br>
+          <p class="-text-grey">Master thesis topic: "Simulator for training aircraft marshallers through virtual reality." - UNIBIT</p><br>
         
           <h4>Bachelor degree in Engineering Design</h4>
-          <p class="-text-grey">Technical university of Sofia - Diplomata theme: UI App for fast mobile ...</p>
+          <p class="-text-grey">Bachelor thesis topic: "Designing an app for fast mobile device control." - Technical university of Sofia</p>
       </div> 
   
   </div>
@@ -275,16 +299,16 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 
     <div class="my-contact-container">
-      <h4 > &emsp;&emsp;My motivation:</h4><br>
+      <!-- <h4 > &emsp;&emsp;My motivation:</h4><br> -->
       <p class="-text-grey">&emsp;&emsp;As a child, I've been interested in technology and creativity and always strived to invent new things.
-         Since the day I drew my first custom board game, till now I'm still excited about stuff that makes the people impassioned.
+         Since the day I drew my first custom board game till now, I'm still excited about things that make the people impassioned.
           For the past 2 years, I've been developing immersive virtual worlds and exploring the infitive universe of the computer technologies combined with creativity.</p>
     </div>
 
   </div>
   <!-- ========================================================================================  -->
 
-  <h5>Mobile:0883440788 &emsp;naskovvt@abv.bg</h5>
+  <h5>call: 0883440788 &emsp;naskovvt@abv.bg</h5>
   <p class="-text-grey">3D Developer in Technofy</p>
 
   <hr>
@@ -392,7 +416,7 @@ scroll();
   // resize text ontop of video 
 
   var videoDiv = document.getElementsByClassName("video-div")[0];
-  var ontopVideoP = document.getElementsByClassName("ontop-of-video-p")[0];
+  var ontopVideoP = document.getElementsByClassName("ontop-of-video")[0];
   
   videoDiv.style.width = "auto";
   
