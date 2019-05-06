@@ -13,18 +13,33 @@
    src: url('Proxima Nova Bold.otf');
 }
 
+html, body{
+   box-sizing:border-box;
+   overflow-x:hidden;
+   line-height:1.5;
+   margin:0;
+   padding:0;
+}
+
+*,*:before,*:after{
+   box-sizing:inherit;
+   -ms-text-size-adjust:100%;
+   -webkit-text-size-adjust:100%;
+}
+
+
 /* FONTS */
 html{
    font-size:1em;
    color: #444444;
-   font-family:  pnova-regular;
+   font-family:  pnova-regular, pnova-light;
 }
 
 
 .button_, a{
    letter-spacing: 2px;
    color:black;
-   font-family: pnova-bold;
+   font-family: pnova-bold, pnova-light;
    font-size: 100%;
 }
 
@@ -35,18 +50,22 @@ a{
 .ontop-of-video-p{
    font-size:4vw;
    font-weight: 900;
+   text-align: center;
 }
 
-P,h3{
+p,h3{
    font-size:1.3em;
 }
 
 p{
    font-family:  pnova-light;
+   text-align: justify;
+   text-justify: inter-word;
 }
 
 .flex-contacts{
    color: #444444;
+   font-weight: 700;
 }
 .flex-contacts:hover{
    color:black;
@@ -54,16 +73,18 @@ p{
 
 /* ============================================================ */
 
-html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
-html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
 
-hr{box-sizing:content-box;height:0;overflow:visible}
 
-html,body{line-height:1.5}html{overflow-x:hidden}
+hr{
+   box-sizing:content-box;
+   height:0;overflow:visible;
+   border:0;
+   border-top:1px solid #cccccc;
+   margin:20px 0
+}
 
-hr{border:0;border-top:1px solid #cccccc;margin:20px 0}
 .-video{max-width:100%;min-width:550px;height:auto}
-.-center{text-align:center!important}
+.-center{text-align:center}
 
 
 img{
