@@ -13,66 +13,59 @@
    src: url('Proxima Nova Bold.otf');
 }
 
-
-h4{
+/* FONTS */
+html{
+   font-size:1em;
+   color: #444444;
    font-family:  pnova-regular;
 }
 
-h1,h2,h3{
-   font-family:  pnova-bold;
-   color: #444444;
+
+.button_, a{
+   letter-spacing: 2px;
+   color:black;
+   font-family: pnova-bold;
+   font-size: 100%;
 }
 
-html,h5,h6,p,body{
-   font-family:  pnova-light;
+a{
+   font-size: 1.3em;
 }
 
 .ontop-of-video-p{
-   font-family:  pnova-regular;
+   font-size:4vw;
+   font-weight: 900;
 }
 
+P,h3{
+   font-size:1.3em;
+}
+
+p{
+   font-family:  pnova-light;
+}
+
+.flex-contacts{
+   color: #444444;
+}
+.flex-contacts:hover{
+   color:black;
+}
+
+/* ============================================================ */
 
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
-article,figcaption,header,main,menu,nav,section,#about-me{display:block}
-canvas,video{display:inline-block}[hidden]{display:none}
 
+hr{box-sizing:content-box;height:0;overflow:visible}
 
-dfn{font-style:italic}mark{background:#ff0;color:#000}
-small{font-size:80%}hr{box-sizing:content-box;height:0;overflow:visible}
-button,input{font:inherit;margin:0}
-button,input{overflow:visible}button{text-transform:none}
-button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner{border-style:none;padding:0}
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring{outline:1px dotted ButtonText}
-legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}
-[type=checkbox],[type=radio]{padding:0}
-[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
-[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
-[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}
-::-webkit-input-placeholder{color:inherit;opacity:0.54}
-::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
-/* End extract */
-html,body{font-size:15px;line-height:1.5}html{overflow-x:hidden}
-h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h6{font-size:16px}
-h1,h2,h3,h4,h5,h6{font-weight:400;margin:10px 0}.-wide{letter-spacing:4px}
+html,body{line-height:1.5}html{overflow-x:hidden}
+
 hr{border:0;border-top:1px solid #cccccc;margin:20px 0}
-.-image{max-width:100%;min-width:300px;height:auto}img{vertical-align:middle}a{color:inherit}:disabled *{pointer-events:none}
-.-display-container{position:relative}
-#main{transition:margin-left .4s}
-
-.-col{float:left;width:100%}
-@media (min-width:993px){.-col.l6{width:49.99999%;height: 400px;}}
-.-content{margin-left:auto;margin-right:auto}.-content{max-width:980px}
-@media (max-width:992px) and (min-width:601px){.-hide-medium{display:none!important}}.-round{border-radius:15px}@keyframes -spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}.-opacity-min{opacity:0.75}.-large{font-size:22px!important}.-center{text-align:center!important}.-padding-large{padding:12px 24px 40px 24px!important}
-.-padding-64{padding-top:64px!important;padding-bottom:64px!important}
-.-text-grey{color:#757575!important}
+.-video{max-width:100%;min-width:550px;height:auto}
+.-center{text-align:center!important}
 
 
-
-
-.-medium,.-text-grey{font-size:22px!important}
-h5{font-size:26px}
 img{
    border-radius:10px;
 }
@@ -104,21 +97,29 @@ header{
 .ontop-of-video{
 	z-index:1;
 	color: white;
-	font-size:4vw;
 	width:100%;
 	position: absolute;
-	text-align: center;
+   text-align: center;
 }
 
  /* TRIANGLE arrow on top of video */
  
- .triangle {
-width:4%;
-height: auto;
+.triangle-container{
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width:10%;
+   height: 10vmax;
+   cursor:pointer;
+   margin:auto;
 }
 
-.triangle:hover {
-   cursor:pointer;
+ .triangle {
+   max-width:80px;
+   width:80%;
+   height: auto;
 }
 
 /* Flex Box contents */
@@ -128,6 +129,7 @@ height: auto;
    flex-direction: row;
    flex-wrap: wrap;
    align-items: center;
+   justify-content: center;
  }
 
  .-flex-start-align{
@@ -146,10 +148,6 @@ height: auto;
    text-indent: 50px;
  }
 
- .flex-pics{
-    /* height:500px; */
- }
-
  .flex-text{
    flex-direction: column;
    padding: 0px 20px ;
@@ -158,7 +156,7 @@ height: auto;
    text-align: left;
  }
 
- .flex-text h4{
+ .flex-text h3{
    text-align: center;
  }
 
@@ -178,6 +176,20 @@ height: auto;
    z-index: 10;
    background-color: white ;
    text-align: center;
+
+   -webkit-box-shadow: 0px 2px 8px 0px rgba(112,112,112,0.6);
+   -moz-box-shadow: 0px 2px 8px 0px rgba(112,112,112,0.6);
+   box-shadow: 0px 2px 8px 0px rgba(112,112,112,0.6);
+}
+
+.button_, .contacts-click{
+      position: relative;
+   display: inline-block;
+   border:none;
+   overflow:hidden;
+   text-decoration:none;
+   cursor:pointer;
+   white-space:nowrap;
 }
 
 .button_{
@@ -185,27 +197,12 @@ height: auto;
    width: 25%;
    max-width: 230px;
    
-   /* padding:  10% 7% 5% 7%; */
    text-align:center;
    padding-top: 6px;
-
-   position: relative;
-   display: inline-block;
-   border:none;
-   overflow:hidden;
-   text-decoration:none;
-   cursor:pointer;
-   white-space:nowrap;
-
-   letter-spacing: 2px;
-   color:black;
-   font-family: pnova-bold;
-   
-   font-size: 100%;
 }
 
 
-#my-projects{
+#my-projects-scroll{
    padding-top:40px;
 }
 
@@ -218,6 +215,10 @@ height: auto;
    align-items: flex-start;
    width: 100%;
    padding:20px;
+}
+
+.p-skills p{
+   margin-top:0;
 }
 
 .my-contact-container, .my-pic-container{
@@ -233,7 +234,6 @@ height: auto;
    flex-wrap: wrap;
    flex-flow: column;
    text-align: left;
-   /* padding-left: 15px; */
    max-width: 500px;
    min-width: 200px;
 
@@ -241,24 +241,29 @@ height: auto;
 
 }
 
-/* .my-contact-container h4{
-   text-align:center;
-} */
-
 .my-pic-img{
    flex: 1 1 100px;
    object-fit: contain;
    align-self: flex-start;
-   /* width: 100%;
-   height: auto; */
+   width: 100%;
+   height: auto;
 }
 
 .contact-details{
    line-height:1.5;
 }
 
-/* ----------------------- */
+.flex-contacts{
+   max-width: 400px;
+   justify-content: center;
+   margin: 0 3%;
+}
 
+.flex-contacts:hover{
+color:black;
+}
+
+/* ----------------------- */
 
 
 /* Shutter In Vertical */
@@ -318,4 +323,4 @@ height: auto;
    60% {
      transform: translateY(-10px);
    }
- }
+}
