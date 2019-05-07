@@ -51,6 +51,7 @@ a{
    font-size:4vw;
    font-weight: 900;
    text-align: center;
+   color: #444444;
 }
 
 .fade-out{
@@ -87,7 +88,7 @@ hr{
    margin:20px 0
 }
 
-.-video{max-width:100%;min-width:550px;height:auto}
+.-video{max-width:100%;min-width:550px;height:auto;margin: auto;}
 .-center{text-align:center}
 
 
@@ -112,10 +113,11 @@ header{
 }
 
 .video-div{
-   margin: 0 auto;
    width: 100%;
    height:auto;
-   text-align:center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 

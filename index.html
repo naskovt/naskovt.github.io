@@ -36,7 +36,7 @@
 
   </div>
       
-    <video class="-video" muted autoplay loop onplay="delayedFadeOutElement(); AutoResizeDiv();">
+    <video class="-video -center" poster="./resources/pictures/gifloader.gif" muted autoplay loop onloadeddata="changeTextColor()" onplay="delayedFadeOutElement(); AutoResizeDiv();">
 <!-- <video class="-video" muted autoplay loop onplay="delayedFadeOutElement()" onplay="AutoResizeDiv()"> -->
         <source src="./resources/mymovie.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -417,6 +417,12 @@ function fadeOutElement(){
     window.setTimeout(fadeOutElement, 80); // miliseconds delay between subtractions
   }
 
+}
+
+function changeTextColor(){
+  for(var i = 0 ; i < arraySize; i++){
+      opacityElements[i].style.color = 'white';
+    } 
 }
 
 //////////////////////////////
