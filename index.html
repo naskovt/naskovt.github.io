@@ -27,16 +27,17 @@
   <div class="ontop-of-video">
 
     <p class="ontop-of-video-p">
-        Welcome to the creative coding!
+        The creative side of coding.
     </p>
     
-    <div class="triangle-container" onclick="scrollToProjects()">
+    <div class="triangle-container" onclick="scrollToProjects();">
       <img  class="triangle bounce" src="./resources/pictures/arrow2.png" alt="arrow">
     </div>
 
   </div>
       
-    <video class="-video" muted autoplay loop onplay="AutoResizeDiv()">
+    <video class="-video" muted autoplay loop onplay="delayedFadeOutElement(); AutoResizeDiv();">
+<!-- <video class="-video" muted autoplay loop onplay="delayedFadeOutElement()" onplay="AutoResizeDiv()"> -->
         <source src="./resources/mymovie.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -390,5 +391,29 @@ function AutoResizeDiv(){
 // console.log("h: " + videoDiv.getBoundingClientRect().height);
 window.onresize = AutoResizeDiv;
 //////////////////////////////
+
+
+//////////////////// Fade in out ontop of video p
+
+var opacityValue = 1;
+var opacityElement = document.getElementsByClassName("ontop-of-video-p");
+
+function delayedFadeOutElement(){
+  window.setTimeout(fadeOutElement, 1000); // miliseconds
+}
+
+function fadeOutElement(){
+
+  if (opacityValue > 0){
+    opacityValue -= 0.1; // subtract each time from opacity
+    opacityElement[0].style.opacity = String(opacityValue);
+    window.setTimeout(fadeOutElement, 80); // miliseconds delay between subtractions
+  }
+  // console.log("p fade out effect"); 
+
+}
+
+//////////////////////////////
+
 
 </script>
