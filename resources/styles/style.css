@@ -51,11 +51,10 @@ a{
    font-size:4vw;
    font-weight: 900;
    text-align: center;
-   opacity: 1;
 }
 
-.hidden{
-   opacity: 0;
+.fade-out{
+   opacity: 1;
 }
 
 p,h3{
