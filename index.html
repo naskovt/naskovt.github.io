@@ -320,9 +320,11 @@
 
 <script type="text/javascript">
 
+  // simple scroll to content
+
+
+
   // smooth scroll JS only!
-
-
   function easeInOutQuad(t){
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
   }
@@ -367,12 +369,16 @@
 
 function scrollToAbout(){
   var elmnt = document.getElementById("about-me-scroll");
+
   scrollIt(elmnt, 1300, 'easeInOutQuad');
 }
 
 function scrollToProjects(){
-  var elmnt = document.getElementById("my-projects-scroll");
-  scrollIt(elmnt, 1000, 'easeInOutQuad');
+
+  document.getElementById("my-projects-scroll").scrollIntoView();
+
+  //var elmnt = document.getElementById("my-projects-scroll");
+  //scrollIt(elmnt, 1000, 'easeInOutQuad');
 }
 
 
