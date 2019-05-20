@@ -142,7 +142,7 @@ header{
 .triangle-container{
 
    display: flex;
-   align-items: center;
+   align-items: flex-end;
    justify-content: center;
 
    width:10%;
