@@ -47,6 +47,14 @@ a{
    font-size: 1.3em;
 }
 
+
+.inline_links{
+
+   font-size: 1em;
+   color: #444444;
+   font-family:  pnova-regular, pnova-light;
+}
+
 .ontop-of-video-p{
    font-size:4vw;
    font-weight: 900;
