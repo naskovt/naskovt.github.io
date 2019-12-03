@@ -340,7 +340,7 @@
     <a href="mailto:naskovvt@abv.bg" class="contacts-click  flex-contacts ">naskovvt@abv.bg</a>
     <a href="https://www.linkedin.com/in/atanas-vasilev-7b1923149/" class="contacts-click flex-contacts">LinkedIn</a>
   </div>
-  <p class="-text-grey -center">XR developer in QuarkVR</p>
+  <p class="-text-grey -center">XR developer at QuarkVR</p>
   <!-- <h2>call:  &emsp;naskovvt@abv.bg</h2> -->
 
   <hr>
@@ -350,70 +350,17 @@
 
 <script type="text/javascript">
 
-  // simple scroll to content
-
-
-
-  // smooth scroll JS only!
-//   function easeInOutQuad(t){
-//     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-//   }
-  
-//   function scrollIt(destination, duration, easing, callback) {
-
-//     const start = window.pageYOffset;
-//     const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
-//     const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-//     const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-//     const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
-//     const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
-
-//     if ('requestAnimationFrame' in window === false) {
-//       window.scroll(0, destinationOffsetToScroll);
-//       if (callback) {
-//         callback();
-//       }
-//       return;
-//     }
-
-//     function scroll() {
-//       const now = 'now' in window.performance ? performance.now() : new Date().getTime();
-//       const time = Math.min(1, ((now - startTime) / duration));
-//       const timeFunction = easeInOutQuad(time);
-//       window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
-//       if (window.pageYOffset === destinationOffsetToScroll) {
-//         if (callback) {
-//           callback();
-//         }
-//         return;
-//       }
-//       requestAnimationFrame(scroll);
-//     }
-
-  
-//   scroll();
-// }
-
-
-
-
 function scrollToAbout(){
 
   document.getElementById("about-me-scroll").scrollIntoView();
 
-  //var elmnt = document.getElementById("about-me-scroll");
-  //scrollIt(elmnt, 1300, 'easeInOutQuad');
 }
 
 function scrollToProjects(){
 
   document.getElementById("my-projects-scroll").scrollIntoView();
 
-  //var elmnt = document.getElementById("my-projects-scroll");
-  //scrollIt(elmnt, 1000, 'easeInOutQuad');
 }
-
-
 
 
 //////////////////// resize text ontop of video 
@@ -426,7 +373,6 @@ function AutoResizeDiv(){
   ontopVideoP.style.top = (videoDiv.getBoundingClientRect().height) / 2.7 + "px";
 }
 
-// console.log("h: " + videoDiv.getBoundingClientRect().height);
 window.onresize = AutoResizeDiv;
 //////////////////////////////
 
@@ -438,7 +384,7 @@ var opacityElements = document.getElementsByClassName("fade-out");
 var arraySize = opacityElements.length;
 
 function delayedFadeOutElement(){
-  window.setTimeout(fadeOutElement, 2200); // miliseconds
+  window.setTimeout(fadeOutElement, 2200); // milliseconds
 }
 
 function fadeOutElement(){
@@ -452,7 +398,7 @@ function fadeOutElement(){
       opacityElements[i].style.opacity = String(opacityValue);
     } 
 
-    window.setTimeout(fadeOutElement, 80); // miliseconds delay between subtractions
+    window.setTimeout(fadeOutElement, 80); // milliseconds delay between subtractions
   }
 
 }
